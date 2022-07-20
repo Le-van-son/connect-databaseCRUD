@@ -1,0 +1,20 @@
+<p>create-product works!</p>
+
+<form [formGroup]="productForm" (ngSubmit)="createProduct()">
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" id="name"  formControlName="name">
+  </p>
+  <p>
+    <label for="name">Price: </label>
+    <input type="number" id="price"  formControlName="price">
+  </p>
+  <p>
+    <label for="name">Category: </label>
+    <select formControlName="category" ><option *ngFor="let cate of categories" value="{{cate.id}}" >{{cate.name}}</option></select>  </p>
+  <p>
+    <button type="submit">Create</button>
+  </p>
+</form>
+<hr>

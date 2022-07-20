@@ -1,0 +1,9 @@
+<p>list-product works!</p>
+
+<table border="1">
+  <tr *ngFor="let pro of products"><td>{{pro.id}}</td><td>{{pro.name}}</td><td>{{pro.price}}</td><td>{{pro.category.name}}</td>
+    <td routerLink="/detail-product/{{pro.id}}">Detail</td><td routerLink="/edit-product/{{pro.id}}">Edit</td><td (click)="deleteProduct(pro.id)">Delete</td>
+  </tr>
+</table>
+<a routerLink="create">Add</a>
+

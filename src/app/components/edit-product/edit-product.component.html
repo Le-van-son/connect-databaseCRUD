@@ -1,0 +1,22 @@
+<p>edit-product works!</p>
+<form [formGroup]="editForm" (ngSubmit)="editProduct()">
+  <p>
+    <label for="id">Name: </label>
+    <input type="hidden" id="id"  formControlName="id">
+  </p>
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" id="name"  formControlName="name">
+  </p>
+  <p>
+    <label for="name">Price: </label>
+    <input type="number" id="price"  formControlName="price">
+  </p>
+  <p>
+    <label for="name">Category: </label>
+    <select formControlName="category" ><option *ngFor="let cate of categories" value="{{cate.id}}" >{{cate.name}}</option></select>  </p>
+  <p>
+    <button type="submit">Save</button>
+  </p>
+</form>
+<hr>
